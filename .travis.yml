@@ -2,7 +2,4 @@ language: php
 php: 7.4
 script:
     - php --version
-addons:
-  apt:
-    packages:
-    - libargon2-1
+dist: bionic
