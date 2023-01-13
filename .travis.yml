@@ -1,4 +1,10 @@
-language: php
-php: 7.4
+dist: bionic
+
 script:
-    - php --version
+    - echo 'hello'
+    
+addons:
+  apt:
+    packages:
+    - awscli
+
