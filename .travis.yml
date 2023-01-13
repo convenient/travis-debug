@@ -1,3 +1,5 @@
+language: php
+php: 7.4.22
 dist: bionic
 
 script:
@@ -6,5 +8,11 @@ script:
 addons:
   apt:
     packages:
+    - dpkg
+    - postfix
+    - apache2
+    - libapache2-mod-fcgid
+    - libappindicator3-1
+    - libindicator3-7
     - awscli
 
