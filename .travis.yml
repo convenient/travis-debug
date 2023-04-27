@@ -1,4 +1,20 @@
 language: php
-php: 7.4
+php: 8.1
+dist: bionic
+
+before_script:
+    - set +e
+
 script:
-    - php --version
+    - false
+
+after_success:
+    - echo "in after_success"
+    - "[[ $TRAVIS_TEST_RESULT = 0 ]] && echo passed"
+    - "[[ $TRAVIS_TEST_RESULT = 1 ]] && echo failed"
+
+after_failure:
+    - echo "in after_failure"
+    - "[[ $TRAVIS_TEST_RESULT = 0 ]] && echo passed"
+    - "[[ $TRAVIS_TEST_RESULT = 1 ]] && echo failed"
+
